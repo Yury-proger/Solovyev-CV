@@ -1,0 +1,6 @@
+rpm,shear_stress,corrosion_rate_background,corrosion_rate_inhibitor1,corrosion_rate_inhibitor2,efficiency_inhibitor1,efficiency_inhibitor2
+60,1.52,1.104,0.032,0.041,97.1,96.3
+400,6.12,2.436,0.053,0.045,97.8,98.1
+800,15.32,2.97,0.133,0.067,95.5,97.7
+1200,25.48,2.842,0.279,0.093,90.8,96.9
+1700,38.62,3.02,1.721,0.894,9.4,53.0

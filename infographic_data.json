@@ -1,0 +1,94 @@
+{
+  "title": "Анализ эффективности коррозионной защиты трубопроводов: от CFD-моделирования до практических рекомендаций",
+  "urd_modes": [
+    {
+      "mode": "10% открытие УРД",
+      "shear_stress": 40.72,
+      "max_shear_stress": 57.48,
+      "mean_shear_stress": 34.22,
+      "status": "критический",
+      "description": "При данном режиме ни один из испытанных ингибиторов не обеспечивает требуемую защиту"
+    },
+    {
+      "mode": "100% открытие УРД",
+      "shear_stress": 22.86,
+      "max_shear_stress": 34.43,
+      "mean_shear_stress": 20.39,
+      "status": "условно допустимый",
+      "description": "Ингибитор 2 обеспечивает защиту на большей части поверхности"
+    }
+  ],
+  "inhibitor_thresholds": [
+    {
+      "name": "Ингибитор 1",
+      "threshold": 6.12,
+      "description": "Теряет защитные свойства при КНнС > 6.12 Па"
+    },
+    {
+      "name": "Ингибитор 2",
+      "threshold": 25.48,
+      "description": "Более устойчив - теряет защитные свойства при КНнС > 25.48 Па"
+    }
+  ],
+  "autoclave_results": [
+    {
+      "rpm": 60,
+      "shear_stress": 1.52,
+      "corrosion_rate_background": 1.104,
+      "corrosion_rate_inhibitor1": 0.032,
+      "corrosion_rate_inhibitor2": 0.041,
+      "efficiency_inhibitor1": 97.1,
+      "efficiency_inhibitor2": 96.3
+    },
+    {
+      "rpm": 400,
+      "shear_stress": 6.12,
+      "corrosion_rate_background": 2.436,
+      "corrosion_rate_inhibitor1": 0.053,
+      "corrosion_rate_inhibitor2": 0.045,
+      "efficiency_inhibitor1": 97.8,
+      "efficiency_inhibitor2": 98.1
+    },
+    {
+      "rpm": 800,
+      "shear_stress": 15.32,
+      "corrosion_rate_background": 2.97,
+      "corrosion_rate_inhibitor1": 0.133,
+      "corrosion_rate_inhibitor2": 0.067,
+      "efficiency_inhibitor1": 95.5,
+      "efficiency_inhibitor2": 97.7
+    },
+    {
+      "rpm": 1200,
+      "shear_stress": 25.48,
+      "corrosion_rate_background": 2.842,
+      "corrosion_rate_inhibitor1": 0.279,
+      "corrosion_rate_inhibitor2": 0.093,
+      "efficiency_inhibitor1": 90.8,
+      "efficiency_inhibitor2": 96.9
+    },
+    {
+      "rpm": 1700,
+      "shear_stress": 38.62,
+      "corrosion_rate_background": 3.02,
+      "corrosion_rate_inhibitor1": 1.721,
+      "corrosion_rate_inhibitor2": 0.894,
+      "efficiency_inhibitor1": 9.4,
+      "efficiency_inhibitor2": 53.0
+    }
+  ],
+  "key_metrics": {
+    "data_points_analyzed": 1380,
+    "statistical_method": "95-й процентиль",
+    "corrosion_rate_threshold": 0.1,
+    "efficiency_threshold": 85,
+    "metal_fund_losses": 12,
+    "cost_reduction_potential": "70-85%"
+  },
+  "recommendations": [
+    "Предпочтительный режим - полностью открытый УРД (100%)",
+    "Использование ингибитора 2 вместо ингибитора 1",
+    "Коррозионностойкое исполнение участка трубопровода после УРД",
+    "Дополнительная диагностика в зонах повышенных КНнС"
+  ]
+}
