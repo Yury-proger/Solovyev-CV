@@ -39,11 +39,39 @@ let currentInhibitors = { inhibitor1: true, inhibitor2: true };
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', function() {
+    // Projects switching
+    setupProjectsTabs();
+
     initializeEventListeners();
     initializeChart();
     populateDataTable();
     updateResultsPanel();
 });
+
+function setupProjectsTabs() {
+    const tabs = document.querySelectorAll('.projects-tab');
+    const projects = document.querySelectorAll('.project');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Update active tab
+            tabs.forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+
+            // Toggle projects visibility
+            const targetSelector = tab.getAttribute('data-target');
+            projects.forEach(section => section.classList.remove('is-active'));
+            const target = document.querySelector(targetSelector);
+            if (target) {
+                target.classList.add('is-active');
+            }
+        });
+    });
+}
 
 // Event listeners
 function initializeEventListeners() {

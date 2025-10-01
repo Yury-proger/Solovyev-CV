@@ -21,10 +21,23 @@
         </div>
     </header>
 
-    <!-- Main Dashboard -->
-    <main class="dashboard">
+    <!-- Projects Navigation -->
+    <nav class="projects-nav">
         <div class="container">
-            <div class="dashboard-grid">
+            <div class="projects-nav__tabs" role="tablist" aria-label="Проекты портфолио">
+                <button class="projects-tab active" role="tab" aria-selected="true" aria-controls="project-1" data-target="#project-1">Проект 1</button>
+                <button class="projects-tab" role="tab" aria-selected="false" aria-controls="project-2" data-target="#project-2">Проект 2</button>
+                <button class="projects-tab" role="tab" aria-selected="false" aria-controls="project-3" data-target="#project-3">Проект 3</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project 1 -->
+    <section id="project-1" class="project is-active" role="tabpanel" aria-labelledby="project-1-tab">
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <div class="container">
+                <div class="dashboard-grid">
                 <!-- Control Panel (Left) -->
                 <aside class="control-panel">
                     <div class="panel-section">
@@ -151,7 +164,7 @@
                 </aside>
             </div>
         </div>
-    </main>
+        </main>
 
     <!-- Data Table Section -->
     <section class="data-table-section">
@@ -174,6 +187,31 @@
                         <!-- Data will be populated by JavaScript -->
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Project 2 (placeholder) -->
+    <section id="project-2" class="project" role="tabpanel" aria-labelledby="project-2-tab">
+        <div class="container">
+            <div class="card" style="margin: 32px 0;">
+                <div class="card__body">
+                    <h2>Проект 2: Заглушка</h2>
+                    <p>Описание проекта будет добавлено позже. Здесь появится интерактивный модуль, визуализации и таблицы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 3 (placeholder) -->
+    <section id="project-3" class="project" role="tabpanel" aria-labelledby="project-3-tab">
+        <div class="container">
+            <div class="card" style="margin: 32px 0;">
+                <div class="card__body">
+                    <h2>Проект 3: Заглушка</h2>
+                    <p>Описание проекта будет добавлено позже. Здесь появится аналитическая панель с графиками.</p>
+                </div>
             </div>
         </div>
     </section>
